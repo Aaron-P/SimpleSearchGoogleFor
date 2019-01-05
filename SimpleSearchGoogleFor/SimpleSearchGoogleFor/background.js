@@ -3,6 +3,15 @@
 
     //TODO: Hide if the default search engine is already google?
     //There's no listener methods available for browser.search so right now it would need to be loop based, which isn't great.
+    //async function searchCheck() {
+    //    let search = (await browser.search.get()).find(_ => _.isDefault).name;
+    //    if (search === "Google") //Can it ever be called something else?
+    //        ;//Remove context menu item
+    //    else
+    //        ;//Add context menu item
+    //}
+    //var interval = setInterval(searchCheck, 1000);
+
     browser.menus.create({
         id: "search-google",
         title: "Search &Google for \"%s\"",
@@ -10,11 +19,11 @@
     });
 
     browser.menus.onClicked.addListener((info, tab) => {
-        if (info.menuItemId !== "search-google")
+        if (info.menuItemId !== "search-google" || !info.selectionText)
             return;
 
         let url = new URL("https://www.google.com/search");
-        url.searchParams.set("q", info.selectionText);
+        url.searchParams.set("q", info.selectionText.trim());
 
         browser.tabs.create({
             url: url.href
