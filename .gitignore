@@ -238,5 +238,5 @@ pip-log.txt
 *.nupkg
 *.pem
 **/.vs/*
-/SimpleSearchGoogleFor/7za.exe
-/SimpleSearchGoogleFor/Firefox/*
+*/7za.exe
+*/Firefox/*
