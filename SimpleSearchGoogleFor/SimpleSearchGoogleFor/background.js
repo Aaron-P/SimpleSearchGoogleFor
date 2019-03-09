@@ -1,4 +1,4 @@
-(function() {
+(async function () {
     "use strict";
 
     //TODO: Hide if the default search engine is already google?
