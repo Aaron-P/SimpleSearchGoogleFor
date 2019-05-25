@@ -18,14 +18,21 @@
         contexts: ["selection"]
     });
 
-    browser.menus.onClicked.addListener((info, tab) => {
+    browser.menus.onClicked.addListener(async (info, tab) => {
         if (info.menuItemId !== "search-google" || !info.selectionText)
             return;
+
+        let index;
+        let newTabPosition = await browser.browserSettings.newTabPosition.get({});
+        if (newTabPosition.value !== "atEnd") {
+            index = tab.index + 1;
+        }
 
         let url = new URL("https://www.google.com/search");
         url.searchParams.set("q", info.selectionText.trim());
 
-        browser.tabs.create({
+        await browser.tabs.create({
+            index: index,
             url: url.href
         });
     });
