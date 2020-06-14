@@ -1,4 +1,6 @@
-Icon made by [Freepik](https://www.freepik.com/) from Flaticon is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
+Chrome extension icon made by [Those Icons](https://www.flaticon.com/authors/those-icons) from [www.flaticon.com](https://www.flaticon.com/)
+
+Firefox extension icon made by [Freepik](https://www.freepik.com/) from Flaticon is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
 
 ## Creative Commons
 
