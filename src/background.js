@@ -1,4 +1,4 @@
-(async function () {
+(async () => {
     "use strict";
 
     //TODO: Hide if the default search engine is already google?
@@ -36,4 +36,4 @@
             url: url.href
         });
     });
-}());
+})();
