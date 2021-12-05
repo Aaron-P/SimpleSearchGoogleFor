@@ -23,7 +23,7 @@
             return;
 
         let index;
-        let newTabPosition = await browser.browserSettings.newTabPosition.get({});
+        let newTabPosition = await browser.browserSettings.newTabPosition.get({}); // FF61
         if (newTabPosition.value !== "atEnd") {
             index = tab.index + 1;
         }
